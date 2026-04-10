@@ -1,0 +1,40 @@
+# --- Byte-compiled / optimized / DLL files ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+# It is best practice to never commit your actual venv folder
+.venv/
+venv/
+ENV/
+env/
+pythonenv/
+
+# --- Environment Variables / Secrets ---
+# Never commit your API keys or passwords!
+.env
+.flaskenv
+
+# --- Distribution / Packaging ---
+dist/
+build/
+*.egg-info/
+*.egg
+/site-packages/
+
+# --- Unit testing / Coverage reports ---
+htmlcov/
+.tox/
+.noseresults
+.pytest_cache/
+.coverage
+.coverage.*
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+
+# --- OS / IDE Specific (Optional but helpful) ---
+.DS_Store
+.vscode/
+.idea/
