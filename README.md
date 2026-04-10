@@ -63,7 +63,7 @@ response = gateway.chat([
 ## Providers
 
 - `openai` (OpenAI-compatible)
-- `openrouter` (OpenAI-compatible)
+- `openrouter` (OpenAI-compatible with OpenRouter-specific normalization)
 - `groq` (dedicated provider on top of OpenAI-compatible API)
 - `together` (OpenAI-compatible)
 - `gemini`

@@ -5,7 +5,7 @@ from multi_llm.providers.anthropic import AnthropicProvider
 from multi_llm.providers.base import LLMProvider
 from multi_llm.providers.gemini import GeminiProvider
 from multi_llm.providers.groq import GroqProvider
-from multi_llm.providers.openai_compatible import OpenAICompatibleProvider
+from multi_llm.providers.openrouter import OpenRouterProvider
 from multi_llm.types import ChatMessage, ProviderCapabilities
 
 
@@ -13,7 +13,7 @@ def test_factory_returns_openai_compatible_provider() -> None:
     provider = create_provider(
         ProviderConfig(provider="openrouter", api_key="k", model="x")
     )
-    assert isinstance(provider, OpenAICompatibleProvider)
+    assert isinstance(provider, OpenRouterProvider)
     assert provider.config.base_url == "https://openrouter.ai/api/v1"
 
 

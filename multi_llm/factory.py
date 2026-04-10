@@ -7,6 +7,7 @@ from multi_llm.providers.anthropic import AnthropicProvider
 from multi_llm.providers.base import LLMProvider
 from multi_llm.providers.gemini import GeminiProvider
 from multi_llm.providers.groq import GroqProvider
+from multi_llm.providers.openrouter import OpenRouterProvider
 from multi_llm.providers.openai_compatible import OpenAICompatibleProvider
 
 
@@ -48,7 +49,7 @@ def available_providers() -> list[str]:
 
 def _register_builtins() -> None:
     register_provider("openai", OpenAICompatibleProvider, "https://api.openai.com/v1", overwrite=True)
-    register_provider("openrouter", OpenAICompatibleProvider, "https://openrouter.ai/api/v1", overwrite=True)
+    register_provider("openrouter", OpenRouterProvider, "https://openrouter.ai/api/v1", overwrite=True)
     register_provider("together", OpenAICompatibleProvider, "https://api.together.xyz/v1", overwrite=True)
     register_provider("groq", GroqProvider, "https://api.groq.com/openai/v1", overwrite=True)
     register_provider("anthropic", AnthropicProvider, "https://api.anthropic.com/v1", overwrite=True)
